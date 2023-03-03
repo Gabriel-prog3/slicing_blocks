@@ -1,27 +1,26 @@
-import pygame
+import pygame as pg
+import random
 
-pygame.font.init()
+
+pg.font.init()
 FPS = 60
 WIDTH, HEIGHT = 700, 584
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+WIN = pg.display.set_mode((WIDTH, HEIGHT))
 
 
-clock = pygame.time.Clock()
+clock = pg.time.Clock()
 
 
 def draw_update():
     clock.tick(FPS)
-    pygame.display.flip()
+    pg.display.flip()
     WIN.fill((0, 0, 0))
 
 
 while True:
-    # push example
-    print("push exmaple")
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
+    for event in pg.event.get():
+        if event.type == pg.QUIT:
+            pg.quit()
             break
 
     draw_update()
