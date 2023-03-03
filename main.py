@@ -16,6 +16,8 @@ def draw_update():
 
 
 while True:
+    # push example
+    print("push exmaple")
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
